@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD130 Wireframe Test</title>
+    <link rel="stylesheet" href="styles/wireframe.css">
     <!-- based on example wireframe in class: -->
 </head>
 <body>
     <header>
         <nav>
-            <a href="wireframe.html"><img src="images/logo.png" alt="main logo"></a>
+            <a href="wireframe.html"><img src="images/Screenshot 2024-05-01 203235.png" alt="main logo"></a>
             <ul>
                 <li><a href="#">Main Action</a></li>
                 <li><a href="#">Secondary</a></li>
-                <li><a href="#">Other</a></li>
+                <li><a href="#hero">Other (tag to hero id)</a></li> <!-- hero tag -->
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -21,13 +22,14 @@
     </header>
     <main>
         <!-- large section at top called "hero" or "banner" -->
-        <div class="banner">
-            <img src="images/background_maybe" alt="banner image">
+        <div id="hero" class="banner">
+            <!-- image in .css file: -->
+            <!-- <img src="images/background_maybe" alt="banner image"> -->
             <h2>Main Banner Heading</h2>
             <p>Description / clarification / promotional</p>
         </div>
         <div class="main-card"> <!-- repeat 8 times -->
-            <img src="images/main_card1" alt="card type">
+            <img src="images/nice hat.jpg" alt="card type">
             <h3>Image Name</h3>
             <p>Description / clarification / promotional</p>
         </div>
