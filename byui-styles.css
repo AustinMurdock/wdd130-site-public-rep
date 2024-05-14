@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+}
+/** {
+    border: 2px solid blue;
+}*/
+a:hover {
+    background-color: white;
+    color: steelblue;
+}
+nav, footer {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+img { /* or only target main img */
+    width: 80%;
+    /* min-width: 800px; */
+    border-radius: 5px; /* % will stretch on square or rectangle */
+    display: block;
+    margin: 0 auto; /* auto spacing on each side */
+}
+main p { /* paragraphs inside of main */
+    width: 78%;
+    margin: 12px auto; /* to center container, as opposed to text-align: center */
+}
+footer p {
+    font-size: 20px;
+    margin: 20px auto;
+}
