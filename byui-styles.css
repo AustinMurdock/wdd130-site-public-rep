@@ -4,15 +4,19 @@ body {
 /** {
     border: 2px solid blue;
 }*/
-a:hover {
-    background-color: white;
-    color: steelblue;
-}
 nav, footer {
     background-color: steelblue;
     color: white;
     padding: 10px;
     text-align: center;
+}
+a {
+    font-size: 1.2em; /* 150% of text size of <nav>'s inherited default 16px */
+    
+}
+a:hover {
+    background-color: white;
+    color: steelblue;
 }
 h1 {
     text-align: center;
@@ -20,7 +24,7 @@ h1 {
 img { /* or only target main img */
     width: 80%;
     /* min-width: 800px; */
-    border-radius: 5px; /* % will stretch on square or rectangle */
+    border-radius: 2px; /* % will stretch on square or rectangle */
     display: block;
     margin: 0 auto; /* auto spacing on each side */
 }
