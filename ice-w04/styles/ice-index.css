@@ -1,0 +1,47 @@
+/* * {
+    border: 1px solid blue;
+} */
+body {
+    background-color: #5ca1d7;
+    width: 80%;
+    min-width: 350px;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+h1 {
+    color: white;
+}
+h1:hover {
+    color: black;
+}
+.quote-body {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.quote-attribute {
+    color: white;
+    font-weight: bold;
+}
+li {
+    padding: 5px;
+    text-align: left;
+    font-weight: bold;
+}
+.feature-img {
+    width: 40%;
+}
+.block-quote-body {
+    color: white;
+    width: 70%;
+    margin: 0 auto;
+    padding: 22px 0 22px 0;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.block-quote-attribute {
+    width: 80%;
+    margin: 0 auto;
+    padding: 12px 0 12px 0;
+}
