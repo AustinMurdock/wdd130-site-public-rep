@@ -1,0 +1,82 @@
+body {
+    /* max-width: 400px; */
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+header {
+    background-color: #CFCBD3fe;
+}
+.logo, .card-icon {
+    width: 80px;
+}
+nav a {
+    text-align: center;
+    color: #4281A4;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #4281A4;
+    color: #FFF;
+}
+#hero img {
+    width: 100%;
+}
+#hero h1, #hero h4 {
+    text-align: center;
+}
+#hero h1 {
+    color: #4281A4;
+}
+h4 {
+    color: #4281A4;
+}
+.button-box {
+    text-align: center;
+    background-color: #CFCBD3;
+    color: #4281A4;
+    text-decoration: none;
+}
+.button-box:hover {
+    background-color: #4281A4;
+    color: #FFF;
+}
+.button-box a {
+    /* so text hover's also triggered whenever button's hovered: */
+    color: inherit;
+    text-decoration: inherit;
+}
+main section {
+    text-align: center;
+}
+#background {
+    height: 725px;
+    background-color: #4281A4;
+}
+.home-msg {
+    background-color: #FFF;
+}
+.home-msg h2 {
+    color: #4281A4;
+}
+.home-msg p {
+    color: #4281A4;
+}
+footer {
+    background-color: #CFCBD3;
+    color: #4281A4;
+}
+footer p {
+    font-size: 1.2em;
+}
+footer a {
+    color: #4281A4;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.social img {
+    width: 64px;
+}
