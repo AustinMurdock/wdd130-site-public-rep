@@ -1,8 +1,10 @@
 body {
+    background-color: #FFF;
+}
+#content {
     /* max-width: 400px; */
     max-width: 1600px;
     margin: 0 auto;
-    background-color: #FFF;
 }
 header {
     background-color: #CFCBD3fe;
