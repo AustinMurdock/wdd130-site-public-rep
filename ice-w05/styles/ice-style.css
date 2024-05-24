@@ -1,0 +1,26 @@
+/* * {
+    border: 1px solid blue;
+} */
+body {
+    margin: 0;
+    background-color: #737373;
+}
+.hero img {
+    width: 100%;
+}
+div.circlesbox {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+img.circle {
+    border-radius: 50%;
+}
+.circlesbox * {
+    width: 19.2%;
+    /* for small window: */
+    /* border: 7px solid #444444; */
+    border: 15px solid #444444;
+    text-align: center;
+    margin: 4%;
+}
