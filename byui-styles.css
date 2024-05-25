@@ -1,17 +1,20 @@
+/* * {
+    border: 2px solid blue;
+} */
 body {
     margin: 0;
 }
-/** {
-    border: 2px solid blue;
-}*/
-nav, footer {
+nav {
     background-color: steelblue;
     color: white;
-    padding: 10px;
+    padding: 25px;
     text-align: center;
 }
 a {
-    font-size: 1.2em; /* 150% of text size of <nav>'s inherited default 16px */
+    /* 120% of text size of <nav>'s inherited default 16px: */
+    font-size: 1.2em;
+    color: white;
+    padding: 25px;
     
 }
 a:hover {
@@ -20,19 +23,29 @@ a:hover {
 }
 h1 {
     text-align: center;
+    margin: 50px 0;
 }
-img { /* or only target main img */
+main img {
     width: 80%;
     /* min-width: 800px; */
-    border-radius: 2px; /* % will stretch on square or rectangle */
+    /* % will stretch on square or rectangle: */
+    border-radius: 2px;
     display: block;
-    margin: 0 auto; /* auto spacing on each side */
+    /* auto spacing on each side: */
+    margin: 0 auto;
+    border: 4px solid steelblue;
 }
 main p { /* paragraphs inside of main */
     width: 78%;
-    margin: 12px auto; /* to center container, as opposed to text-align: center */
+    margin: 40px auto; /* to center container, as opposed to text-align: center */
+}
+footer {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    margin: 20px auto;
 }
 footer p {
+    padding: 25px;
     font-size: 20px;
-    margin: 20px auto;
 }
