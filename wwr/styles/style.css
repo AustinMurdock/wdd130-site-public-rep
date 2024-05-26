@@ -1,5 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&family=Roboto:wght@400&display=swap');
+
+:root {
+    --heading-font: "Roboto Slab", Georgia, "Times New Roman";
+    --paragraph-font: Roboto, "Arial", Helvetica;
+    --main-color: #4281A4;
+    --shaded-color: #CFCBD3;
+    --accent-color: #48BF63;
+}
+
+/* * {
+    border: 1px solid blue;
+} */
 body {
     background-color: #FFF;
+    font-family: var(--paragraph-font);
+    font-size: 22px;
+    padding: 0;
+    margin: 0;
 }
 #content {
     /* max-width: 400px; */
@@ -7,72 +24,102 @@ body {
     margin: 0 auto;
 }
 header {
-    background-color: #CFCBD3fe;
+    background-color: var(--shaded-color);
 }
-.logo, .card-icon {
+#logo-link {
+    padding-top: 5px;
+}
+.logo {
     width: 80px;
 }
 nav a {
     text-align: center;
-    color: #4281A4;
+    color: var(--main-color);
     text-decoration: none;
+    padding: 35px;
 }
 nav a:hover {
-    background-color: #4281A4;
+    background-color: var(--main-color);
     color: #FFF;
 }
 #hero img {
     width: 100%;
 }
-#hero h1, #hero h4 {
-    text-align: center;
-}
-#hero h1 {
-    color: #4281A4;
-}
-h4 {
-    color: #4281A4;
-}
-.button-box {
-    text-align: center;
-    background-color: #CFCBD3;
-    color: #4281A4;
-    text-decoration: none;
-}
-.button-box:hover {
-    background-color: #4281A4;
-    color: #FFF;
-}
-.button-box a {
-    /* so text hover's also triggered whenever button's hovered: */
-    color: inherit;
-    text-decoration: inherit;
+h1, h4 {
+    color: var(--main-color);
+    font-family: var(--heading-font);
 }
 main section {
     text-align: center;
 }
-#background {
+main section img {
+    /* include the border px in total image size: */
+    box-sizing: border-box;
+}
+#hero h1 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+.button-box {
+    text-align: center;
+}
+.button-box .open-page, .about {
+    background-color: var(--shaded-color);
+    color: var(--main-color);
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.button-box .open-page:hover, .about:hover {
+    background-color: var(--main-color);
+    color: #FFF;
+}
+.grid-card {
+    margin: 200px 0;
+}
+.card-img {
+    border: 10px solid var(--accent-color);
+}
+.card-icon {
+    width: 80px;
+    padding-top: 10px;
+}
+h2 {
+    color: var(--main-color);
+    font-family: var(--heading-font);
+    margin: 0;
+}
+p {
+    color: var(--main-color);
+}
+.home-msg-img #background {
     height: 725px;
-    background-color: #4281A4;
+    background-color: var(--main-color);
 }
-.home-msg {
+.home-msg-img img {
+    margin: 100px 0;
+}
+.home-msg-card {
     background-color: #FFF;
+    line-height: 1.5em;
+    padding: 35px;
 }
-.home-msg h2 {
-    color: #4281A4;
-}
-.home-msg p {
-    color: #4281A4;
+.home-msg-card p {
+    font-size: 0.8em;
+    padding-bottom: 15px;
 }
 footer {
-    background-color: #CFCBD3;
-    color: #4281A4;
+    background-color: var(--shaded-color);
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer p {
     font-size: 1.2em;
 }
 footer a {
-    color: #4281A4;
+    color: var(--main-color);
     text-decoration: none;
 }
 footer a:hover {
@@ -81,4 +128,8 @@ footer a:hover {
 }
 .social img {
     width: 64px;
+    padding-top: 15px;
+}
+.social img:hover {
+    transform: scaleX(-1) rotate(20deg);
 }
