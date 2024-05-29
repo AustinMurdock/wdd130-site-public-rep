@@ -1,0 +1,42 @@
+/* * {
+    border: 1px solid blue;
+} */
+body {
+    margin: 1% 6%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 0.5rem;
+    font-size: 2.2vw;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-auto-columns: 1fr;
+}
+.grid1-img {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 100%;
+}
+.grid2-shading {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-color: #b9b8b9;
+}
+.grid3-title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 1;
+    text-align: center;
+    align-self: end;
+    font-size: 4.8em;
+}
+.grid4-subheading {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+    text-align: center;
+    align-self: center;
+    font-size: 2.5em;
+    color: #9c0e11;
+
+}
