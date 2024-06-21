@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+body {
+    background-color: #1e1e1e;
+}
+div.post {
+    background-color: #fff;
+    /* width: 200px; */
+    width: 400px;
+    font-size: 2em;
+    border-radius: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Roboto Slab", "Noto Serif", Cambria, Cochin, serif;
+}
+.post img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.post .content h4 {
+    margin-bottom: 0px;
+    color: #3f5b8b;
+    font-size: 0.55em;
+}
+.post .content h1 {
+    margin: 0 auto;
+    font-size: 1.3em;
+}
+.post .content p {
+    width: 80%;
+    margin: 32px auto;
+    font-size: 0.65em;
+    color: gray;
+    line-height: 125%;
+}
+.details-grid {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #3f5b8b;
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.62em;
+}
+.details-grid div {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+.details-grid div:nth-child(1), .details-grid div:nth-last-child(1) {
+    border: 0px;
+}
+.details-grid .large-num {
+    font-weight: normal;
+    vertical-align: sub;
+    font-size: 1.6em;
+}
