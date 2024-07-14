@@ -28,6 +28,10 @@ Fonts are separated by a | */
     --nav-hover-background-color: var(--primary-color);
 }
 
+.example-img {
+    max-width: 180px;
+    margin: 12px auto;
+}
 
 /* Look around below...but DON'T CHANGE ANYTHING! */
 
