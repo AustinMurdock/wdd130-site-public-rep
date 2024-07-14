@@ -200,6 +200,47 @@ footer a:hover {
     transform: scaleX(-1) rotate(20deg);
 }
 
+
+/* added for intro-history/ specific style: */
+.subpage-heading {
+    margin: 80px auto;
+}
+.subpage-heading h1 {
+    font-size: 2em;
+}
+.timeline-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 120px 120px;
+    column-gap: 40px;
+    row-gap: 160px;
+}
+.timeline-grid .line-graphic {
+    background-color: var(--accent-color);
+    width: 12px;
+    border-radius: 100px;
+    grid-row: 1 / span 5;
+}
+.timeline-grid .timeline-grid-card-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 40px;
+    box-shadow: 5px 5px 10px var(--shaded-color);
+    padding: 24px 18px;
+    border-radius: 5px;
+}
+.timeline-grid .timeline-grid-card-grid img {
+    height: 320px;
+    box-shadow: 5px 5px 10px var(--shaded-color);
+    border-radius: 5px;
+}
+.timeline-grid .timeline-grid-card-grid section {
+    text-align: left;
+    max-width: 80%;
+}
+
+
+
 @media screen and (max-width: 900px) {
     #hero, .home-grid, .home-msg {
         display: block;
@@ -238,5 +279,16 @@ footer a:hover {
     }
     footer {
         margin-top: 25px;
+    }
+    .timeline-grid {
+        margin: 120px 40px
+    }
+    .timeline-grid .timeline-grid-card-grid {
+        grid-template-columns: auto;
+    }
+    .timeline-grid .timeline-grid-card-grid img {
+        height: 100%;
+        /* accounting for w of reactive side margs + line-graphic w + card padd + col gap */
+        max-width: calc(100vw - 80px - 12px - 36px - 40px);
     }
 }
