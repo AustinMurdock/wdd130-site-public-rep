@@ -19,7 +19,8 @@ p, a, li {
     font-family: var(--paragraph-font);
 }
 body {
-    background-image: url(../images/background.jpg);
+    background-image: linear-gradient(#00000020, #00000080), url(../images/background.jpg); /* start with gradient from faint to dark */
+    background-blend-mode: color-burn; /* use darkness of overlaid colors */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -28,9 +29,10 @@ body .content {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 180px;
+    padding-bottom: 160px;
     background-color: var(--accent2-color);
     border: 2px solid var(--accent1-color);
+    box-shadow: 5px 5px 10px #000;
 }
 header {
     border: 1px solid var(--accent1-color);
@@ -73,7 +75,7 @@ header nav .button-small a {
 .home-feature {
     display: flex;
     width: 80%;
-    margin: 86px auto;
+    margin: 85px auto;
 }
 .home-feature img {
     height: 240px;
@@ -100,8 +102,105 @@ header nav .button-small a {
     background-color: var(--accent2-color);
     transform: scaleY(1.05);
 }
+.projects-content > section {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 60px;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 1fr by default is minmax(auto, 1fr) to never be smaller than its content */
+    margin: 10px 80px;
+    gap: 60px;
+}
+img.modal-button {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--accent1-color);
+    border-radius: 5px;
+}
+img.modal-button:hover {
+    transform: scale(1.05);
+    filter: opacity(90%);
+}
+img.modal-button.placeholder {
+    filter: grayscale(100%) blur(2px);
+}
+img.modal-button.placeholder:hover {
+    transform: none;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: #00000066;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid var(--accent1-color);
+    width: 75%;
+    animation-name: zoom;
+    animation-duration: 0.2s;
+}
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.modal-header {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.close {
+    color: var(--accent2-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0 10px;
+    margin-right: 8px;
+}
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-main {
+    margin: 30px 25px 40px;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    column-gap: 40px;
+}
+.hovered-box {
+    background-color: #aaa;
+    padding: 15px 25px;
+}
+.hovered-box > * {
+    box-shadow: 5px 5px 10px #000;
+    width: 100%;
+    object-fit: contain;
+}
+.modal-main section {
+    width: 100%;
+    margin-right: 35px;
+}
+.modal-main a {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     body .content {
         width: 98%;
         margin: 0 auto;
@@ -115,7 +214,7 @@ header nav .button-small a {
     }
     .home-feature {
         flex-direction: column;
-        margin: 46px auto;
+        margin: 45px auto;
     }
     .home-feature img {
         height: auto;
@@ -123,6 +222,20 @@ header nav .button-small a {
         margin: 0 auto;
     }
     .home-feature section {
-        margin: 36px auto;
+        margin: 35px auto;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .modal-content {
+        margin: 10% auto;
+        width: 90%;
+    }
+    .modal-main {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .hovered-box {
+        padding: 15px 5px;
     }
 }
