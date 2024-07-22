@@ -26,9 +26,9 @@
             <div class="about-feature">
                 <img src="images/profile1.png" alt="austin murdock photo">
                 <p>Hi, I'm Austin Murdock, currently studying Computer Science at Brigham Young University - Idaho. I have no research papers, degrees, or certificates. My relevant experience is very limited, but I work well with others, I think, probably. If you knew where I lived, you would likely be able to find me not eating watermelon rinds, or <strike>playing</strike> studying video games.</p>
-                <img src="images/smile.gif" alt="smile ascii :) :D">
+                <img class="icon" src="images/smile.gif" alt="smile ascii :) :D">
                 <div class="social-links">
-                    <p>Linkedin & Github:</p>
+                    <p>LinkedIn & Github:</p>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/austin-murdock-308b842a1/" target="_blank">linkedin.com/in/austin-murdock-308b842a1</a></li>
                         <li><a href="https://github.com/AustinMurdock" target="_blank">github.com/AustinMurdock</a></li>
@@ -38,22 +38,21 @@
             <!-- form structure based on tutorial from https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form -->
             <div class="form-container">
                 <img src="images/forms_icon.png" alt="simple form icon">
+                <div id="form-notification"></div>
                 <form action="#" method="post">
+                    <h4>[NON-FUNCTIONAL] Work Email Contact Form:</h4>
                     <ul>
                         <li>
-                            <p>[NON-FUNCTIONAL] Work Email Contact Form:</p>
-                        </li>
-                        <li>
                             <label for="name">Name:</label>
-                            <input type="text" id="form-name" name="user_name">
+                            <input type="text" id="name" name="user_name">
                         </li>
                         <li>
                             <label for="email">Email:</label>
-                            <input type="email" id="form-email" name="user_email">
+                            <input type="email" id="email" name="user_email">
                         </li>
                         <li>
-                            <label for="msg">Message:</label>
-                            <textarea id="form-msg" name="user_message"></textarea>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="user_message"></textarea>
                         </li>
                         <li class="submit-button">
                             <button type="submit">Send to aumu870@gmail.com</button>
@@ -61,13 +60,23 @@
                     </ul>
                 </form>
             </div>
-            <div class="button-small">
-                <!-- example pdf -->
-                <a href="documents/austin_murdock_resume_byui_custodial_1_11_24.pdf" target="_blank">[EXAMPLE] Resume PDF 1/11/2024</a>
-            </div>
-            <img src="images/profile2.jpg" alt="austin murdock making pasta photo">
+            <!-- <div class="button-small"> -->
+            <!-- example pdf -->
+            <a href="documents/austin_murdock_resume_byui_custodial_1_11_24.pdf" target="_blank">[OLD VERSION] Resume PDF 1/11/2024</a>
+            <!-- </div> -->
+            <img class="bonus-img" src="images/profile2.jpg" alt="austin murdock making pasta photo">
         </main>
         <footer></footer>
     </div>
+    <script>
+        const feedbackElement = document.getElementById('form-notification');
+        const formElement = document.forms[0];
+        formElement.addEventListener('submit', function(e) {
+            e.preventDefault();
+            feedbackElement.innerHTML = 'Hello ' + formElement.user_name.value + '! Sorry, your message \"' + formElement.user_message.value + '\" was not sent anywhere in particular, as currently intended.';
+            feedbackElement.style.display = 'block';
+            document.body.classList.toggle('move-down');
+        });
+    </script>
 </body>
 </html>

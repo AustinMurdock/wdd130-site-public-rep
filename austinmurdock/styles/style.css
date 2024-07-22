@@ -15,7 +15,7 @@
 h1, h2, h3, h4 {
     font-family: var(--heading-font);
 }
-p, a, li {
+p, a, li, label, input, textarea, button {
     font-family: var(--paragraph-font);
 }
 body {
@@ -28,7 +28,7 @@ body {
 body .content {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 120px;
     padding-bottom: 160px;
     background-color: var(--accent2-color);
     border: 2px solid var(--accent1-color);
@@ -53,7 +53,7 @@ header nav .nav-buttons {
     display: flex;
 }
 .button-small a {
-    display: flex;
+    display: inline-flex;
     height: 50px;
     margin: auto 20px;
     padding: 0 15px;
@@ -199,11 +199,99 @@ img.modal-button.placeholder:hover {
     margin-top: 10px;
     text-align: center;
 }
+.about-feature {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 75%;
+    margin: 85px auto 70px;
+    column-gap: 60px;
+}
+.about-feature img {
+    height: 240px;
+    margin: 0 auto;
+}
+.about-feature img.icon {
+    height: auto;
+    margin-top: 30px;
+}
+.about-feature p {
+    margin-right: 80px;
+}
+.form-container {
+    display: flex;
+    width: 75%;
+    margin: 40px auto;
+    border: 2px solid var(--accent1-color);
+    padding: 25px;
+    box-sizing: border-box;
+    column-gap: 15px;
+    border-radius: 5px;
+}
+.form-container img {
+    width: auto;
+    height: 100%;
+}
+form {
+    display: inline-block;
+    margin: 0 10px;
+    width: 100%;
+}
+form h4 {
+    margin-top: 0;
+}
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+form li + li { /* selects only li elements after 1st li */
+    margin-top: 20px;
+}
+form label {
+    display: inline-block;
+    min-width: 80px;
+    text-align: right;
+}
+form input, form textarea {
+    width: calc(100% - 120px);
+    border: 1px solid var(--accent1-color);
+}
+form textarea {
+    vertical-align: top;
+    height: 60px;
+}
+form button {
+    margin-left: 80px;
+}
+#form-notification {
+    background-color: antiquewhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 15px;
+    display: none;
+    font-family: var(--paragraph-font);
+    animation-name: zoom;
+    animation-duration: 0.2s;
+}
+.move-down {
+    margin-top: 50px;
+}
+.about-content > a {
+    display: block;
+    text-align: center;
+    margin: 40px auto;
+}
+.bonus-img {
+    display: block;
+    margin: 160px auto 40px;
+    height: 140px;
+}
 
 @media screen and (max-width: 700px) {
     body .content {
         width: 98%;
-        margin: 0 auto;
     }
     header nav img {
         margin-left: 20px;
@@ -237,5 +325,41 @@ img.modal-button.placeholder:hover {
     }
     .hovered-box {
         padding: 15px 5px;
+    }
+    .about-feature {
+        grid-template-columns: auto;
+        row-gap: 40px;
+    }
+    .about-feature img {
+        margin-bottom: 40px;
+    }
+    .about-feature p {
+        margin-right: auto;
+    }
+    .about-feature img.icon {
+        display: none;
+    }
+    .form-container img {
+        position: absolute;
+        height: auto;
+    }
+    .form-container form h4 {
+        margin-top: 2px;
+        margin-left: 70px;
+    }
+    .form-container form ul {
+        margin-top: 40px;
+    }
+    form label {
+        display: block;
+        min-width: 0;
+        text-align: left;
+    }
+    form input, form textarea {
+        width: calc(100% - 20px);
+    }
+    form button {
+        display: block;
+        margin: 30px auto 10px;
     }
 }
